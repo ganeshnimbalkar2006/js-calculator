@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,38 +8,107 @@
 </head>
 
 <script>
-function fun1(){
 
-var fnum=document.getElementById("text1").value ;
-var snum=document.getElementById("text2").value;
 
-var tot=parseInt(fnum)  +  parseInt(snum);
+    function add() {
 
-document.getElementById("ans").innerHTML=tot;
+        var fnum = document.getElementById("text1").value;
+        var snum = document.getElementById("text2").value;
 
-}
+        var tot = parseInt(fnum) + parseInt(snum);
 
+        document.getElementById("ans").innerHTML = tot;
+
+    }
+
+
+    function sub() {
+
+        var fnum = document.getElementById("text1").value;
+        var snum = document.getElementById("text2").value;
+
+        var tot = parseInt(fnum) - parseInt(snum);
+
+        document.getElementById("ans").innerHTML = tot;
+
+    }
+
+    function mul() {
+
+        var fnum = document.getElementById("text1").value;
+        var snum = document.getElementById("text2").value;
+
+        var tot = parseInt(fnum) * parseInt(snum);
+
+        document.getElementById("ans").innerHTML = tot;
+
+    }
+
+    function divn() {
+
+        var fnum = document.getElementById("text1").value;
+        var snum = document.getElementById("text2").value;
+
+        var tot = parseInt(fnum) / parseInt(snum);
+
+        document.getElementById("ans").innerHTML = tot;
+
+    }
+
+    function operation() {
+
+        var operation_type = document.getElementById("operation-select").value;
+
+        if (operation_type == "+") {
+            add();
+        }
+
+        if (operation_type == "-") {
+            sub();
+        }
+        if (operation_type == "*") {
+            mul();
+
+        }
+        if (operation_type == "/") {
+            divn();
+        }
+    }
 </script>
 
-<body >
+<body>
     <label for="text">NUM 1:</label>
-<input id="text1" placeholder="enter number 1:">
+    <input id="text1" placeholder="enter number 1:">
 
-<br>
-
-<label for="text">NUM 2:</label>
-<input id="text2" placeholder="enter number 2:">
-
-<hr>
-<h1 style="text-align: right;"> 
-
-     <button onclick="fun1()">add/+</button>
     <br>
 
-<h1 style="text-align: left;">
-    ans:<h2 id="ans"></h2>
-    
-    <br>
+    <label for="text">NUM 2:</label>
+    <input id="text2" placeholder="enter number 2:">
+
+    <hr>
+    <h1 style="text-align: right;">
+
+        <label for="operation-select">Choose a operation:</label>
+
+        <select name="operation" id="operation-select">
+            <option value="">--Please choose operation--</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="*">*</option><br>
+            <div><input type="button" value="AC" onclick="display.value=''"></div>
+
+        </select>
+
+        <button onclick=operation()>operation</button>
+        <br>
+
+        <h1 style="text-align: left;"></h1>
+        ans: <h2 id="ans"></h2>
+
+        <br>
+
 
 </body>
+
 </html>
