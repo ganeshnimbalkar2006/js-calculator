@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculaator</title>
+     <link rel="stylesheet" href="style.css">
 </head>
 
 <script>
@@ -52,8 +53,14 @@
         var tot = parseInt(fnum) / parseInt(snum);
 
         document.getElementById("ans").innerHTML = tot;
+ 
+    }
+
+    function clrall (){
 
     }
+
+    
 
     function operation() {
 
@@ -73,10 +80,16 @@
         if (operation_type == "/") {
             divn();
         }
+        
     }
+    
+    
+    
+    
 </script>
 
 <body>
+
     <label for="text">NUM 1:</label>
     <input id="text1" placeholder="enter number 1:">
 
@@ -96,17 +109,24 @@
             <option value="-">-</option>
             <option value="/">/</option>
             <option value="*">*</option><br>
-            <div><input type="button" value="AC" onclick="display.value=''"></div>
+           
 
         </select>
 
-        <button onclick=operation()>operation</button>
+        <button onclick=clrall() id="clear">AC</button>
+
+
+
+        <button onclick=operation()>Calculate</button>
         <br>
+
 
         <h1 style="text-align: left;"></h1>
-        ans: <h2 id="ans"></h2>
+      Ans:  <h2 id="ans"></h2>
+       
+         
 
-        <br>
+        
 
 
 </body>
