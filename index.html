@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculaator</title>
      <link rel="stylesheet" href="style.css">
+    <script src="script.java"></script>
 </head>
 
 <script>
@@ -18,7 +19,7 @@
 
         var tot = parseInt(fnum) + parseInt(snum);
 
-        document.getElementById("ans").innerHTML = tot;
+        document.getElementById('ans').innerHTML = tot;
 
     }
 
@@ -30,7 +31,7 @@
 
         var tot = parseInt(fnum) - parseInt(snum);
 
-        document.getElementById("ans").innerHTML = tot;
+        document.getElementById('ans').innerHTML = tot;
 
     }
 
@@ -41,7 +42,7 @@
 
         var tot = parseInt(fnum) * parseInt(snum);
 
-        document.getElementById("ans").innerHTML = tot;
+        document.getElementById('ans').innerHTML = tot;
 
     }
 
@@ -52,12 +53,16 @@
 
         var tot = parseInt(fnum) / parseInt(snum);
 
-        document.getElementById("ans").innerHTML = tot;
+        document.getElementById('ans').innerHTML = tot;
  
     }
 
     function clrall (){
-
+  
+        document.getElementById('text1').value ="";
+        document.getElementById('text2').value ="";
+        document.getElementById('ans') .innerHTML="";  
+        document.getElementById('operation-select').value ="";
     }
 
     
@@ -98,6 +103,8 @@
     <label for="text">NUM 2:</label>
     <input id="text2" placeholder="enter number 2:">
 
+
+
     <hr>
     <h1 style="text-align: right;">
 
@@ -122,9 +129,20 @@
 
 
         <h1 style="text-align: left;"></h1>
-      Ans:  <h2 id="ans"></h2>
+      ANS:<h2 id = "ans"></h2><br>
        
-         
+        
+      
+      <style>
+        h1 {
+          color: blue;
+        }
+
+        body{
+            color:black;
+            background-color: cornflowerblue;
+        }
+      </style>
 
         
 
