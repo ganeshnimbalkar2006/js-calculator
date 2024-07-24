@@ -94,7 +94,7 @@
 </script>
 
 <body>
-
+<h3 style="text-align: center;">
     <label for="text">NUM 1:</label>
     <input id="text1" placeholder="enter number 1:">
 
@@ -103,10 +103,10 @@
     <label for="text">NUM 2:</label>
     <input id="text2" placeholder="enter number 2:">
 
+<h3 style="text-align: center;"></h3>
 
-
-    <hr>
-    <h1 style="text-align: right;">
+    
+    <h1 style="text-align: center;">
 
         <label for="operation-select">Choose a operation:</label>
 
@@ -115,7 +115,7 @@
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="/">/</option>
-            <option value="*">*</option><br>
+            <option value="*">*</option>
            
 
         </select>
@@ -127,21 +127,40 @@
         <button onclick=operation()>Calculate</button>
         <br>
 
-
-        <h1 style="text-align: left;"></h1>
-      ANS:<h2 id = "ans"></h2><br>
+ <div class="conatiner" style="display: flex;">
+<h1>Ans:</h1>
+<h1 id="ans"></h2>
+ </div>      
        
-        
+ 
+    <h2> 
+       
+
+       
       
       <style>
         h1 {
-          color: blue;
+          color: rgb(219, 92, 7);
         }
 
-        body{
-            color:black;
-            background-color: cornflowerblue;
-        }
+       
+
+
+
+        body {
+            
+  width: 300px;
+  border: 15px solid black;
+  padding: 50px;
+  margin: auto;
+  margin-top: 120px;
+  
+  text-align: center;
+  justify-content: center;
+  
+}
+
+      
       </style>
 
         
